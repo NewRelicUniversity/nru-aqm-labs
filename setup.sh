@@ -28,10 +28,10 @@ sudo wget -O /var/db/newrelic-infra/newrelic-integrations/logging/out_newrelic.s
 sudo wget -O /var/db/newrelic-infra/newrelic-integrations/logging/parsers.conf https://raw.githubusercontent.com/newrelic/fluent-bit-package/main/parsers.conf > /dev/null 2>&1
 
 echo Installing stress-ng...
-sudo apt install stress-ng > /dev/null 2>&1
+sudo apt install stress-ng -y > /dev/null 2>&1
 
 echo Installing terraform...
-sudo apt install terraform > /dev/null 2>&1
+sudo apt install terraform -y > /dev/null 2>&1
 
 echo Cleaning up
 rm fluent-bit_2.0.8_ubuntu-jammy_amd64.deb
