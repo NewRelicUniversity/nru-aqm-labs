@@ -2,7 +2,7 @@
 
 echo
 echo Updating repositories...
-wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null 2>&1
+wget -O- https://apt.releases.hashicorp.com/gpg > /dev/null 2>&1 | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null 2>&1
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list > /dev/null 2>&1
 sudo apt update > /dev/null 2>&1
 sudo scripts/preinst.sh
@@ -28,10 +28,10 @@ sudo wget -O /var/db/newrelic-infra/newrelic-integrations/logging/out_newrelic.s
 sudo wget -O /var/db/newrelic-infra/newrelic-integrations/logging/parsers.conf https://raw.githubusercontent.com/newrelic/fluent-bit-package/main/parsers.conf > /dev/null 2>&1
 
 echo Installing stress-ng...
-sudo apt install stress-ng > /dev/null 2>&
+sudo apt install stress-ng > /dev/null 2>&1
 
 echo Installing terraform...
-sudo apt install terraform > /dev/null 2>&
+sudo apt install terraform > /dev/null 2>&1
 
 echo Cleaning up
 rm fluent-bit_2.0.8_ubuntu-jammy_amd64.deb
