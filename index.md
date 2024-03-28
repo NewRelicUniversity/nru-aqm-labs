@@ -1,13 +1,13 @@
 # Prerequisites
 
 To complete this lab, you will need: 
-- A personal New Relic account. If you don’t have one, you may sign up for a free account here: https://newrelic.com/signup. 
+- A personal New Relic account. If you don’t have one, you may sign up for a free account here: [https://newrelic.com/signup](https://newrelic.com/signup). 
 - A personal [Github account](https://github.com).
 
 # Start the lab environment and add your license key
 
 ## Step 1
-Log into your Github account and navigate to https://github.com/codespaces. Click the New codespace button in the upper right corner.
+Log into your Github account and navigate to [https://github.com/codespaces](https://github.com/codespaces). Click the New codespace button in the upper right corner.
 
 ## Step 2
 On the Create a new codespace page, click _Select a repository_ and search for **NewRelicUniversity/nru-aqm-lab**. Click the _Create codespace_ button at the bottom of the page.
