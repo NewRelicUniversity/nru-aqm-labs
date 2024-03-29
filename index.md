@@ -23,7 +23,7 @@ Wait for the terminal window to finish running the startup script, then execute 
 
 # Using tags to organize entities
 
-Ref: https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/use-tags-help-organize-find-your-data/
+Ref: [https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/use-tags-help-organize-find-your-data/](https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/use-tags-help-organize-find-your-data/)
 
 ## Step 1
 Select the `nru-aqm-lab` host from the list of entities reporting to your account.
