@@ -21,7 +21,9 @@ Back in your codespace, select the **newrelic-infra.yml** tab and replace the YO
 ## Step 5
 Wait for the terminal window to finish running the startup script, then execute the command `./start.sh` to start the Infrastructure agent. Within a few minutes, you should see Infrastructure log messages on the Logs page of your New Relic account.
 
-# Using tags to organize entities
+---
+
+# _Lab:_ Using tags to organize entities
 
 Ref: [https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/use-tags-help-organize-find-your-data/](https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/use-tags-help-organize-find-your-data/)
 
@@ -31,7 +33,9 @@ Select the `nru-aqm-lab` host from the list of entities reporting to your accoun
 ## Step 2
 Select _Tags_ at the top of the screen. Add one or more tags in the format _key: value_ (for example, _Environment: Training_). You will use one of these tag values in the next lab to specify that an alert condition should monitor this host.
 
-# Create an alert condition based on a tag
+---
+
+# _Lab:_ Using tags in alert conditions
 
 ## Step 1
 From New Relic’s main menu, select _Alerts & AI_, then  _Create alert condition_ from the _Welcome_ page. (If you already have alert conditions in your account, select _Alerts & AI > Alert Conditions > + New alert condition_.)
@@ -48,7 +52,9 @@ On the next screen, give your alert condition a clear name to describe what’s 
 ## Step 5
 Click the _Save condition_ button, but don’t set up notifications yet (click _Cancel_ to close the Workflow page).
 
-# Add a tag to your alert condition and create a custom incident description
+---
+
+# _Lab:_ Tagging alert conditions and using custom incident descriptions
 
 ## Step 1
 From New Relic’s _Alert Conditions_ page, select the condition you just created.
@@ -62,7 +68,9 @@ Scroll down to _Additional details_ and click the _Edit_ button. In the _Send a 
 ## Step 4
 Click the _Save condition_ button to save your changes.
 
-# Configure notifications
+---
+
+# _Lab:_ Advanced notification options
 
 ## Step 1
 From New Relic’s _Alerts & AI_ menu, select _Workflows_, then  _Create your first workflow_ from the _Welcome_ page. (If you already have workflows in your account, select _Workflows > + Add a workflow_.)
@@ -76,7 +84,9 @@ Click the _Additional settings_ button and enable the _Enrich your data_ option.
 ## Step 4
 In the _Notify_ section, select _Email_ and create a new destination for your email address (or select an existing destination if you have already created one). Save the destination, then click _Activate workflow_.
 
-# Generate CPU load to violate your alert condition
+---
+
+# _Lab:_ Testing your alert condition and workflow
 
 ## Step 1
 Back in your codespace, enter the following command in the terminal: `stress-ng --cpu 0 -l 75 -t 10m &`
