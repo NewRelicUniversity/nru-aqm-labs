@@ -96,3 +96,71 @@ Select the `nru-aqm-lab` host in New Relic and observe the increased CPU usage. 
 
 ## Step 3
 You should receive an email notification at the destination you configured. Notice that the email contains the result of the NRQL query you added to your workflow, as well as the custom incident description you added to your alert condition.
+
+---
+
+# NRQL Alerts Quiz
+
+[https://newrelicuniversity.github.io/alerts-quiz](https://newrelicuniversity.github.io/alerts-quiz)
+
+_Note:_ To ensure that the New Relic Browser agent is reporting correctly, right-click on the page and select _Inspect_, then select the _Console_ tab. If you see any errors other than a 404 for a missing `favicon.ico`, you should disable any ad blockers or privacy extensions, then reload the page. The quiz will work without the Browser agent, but your answers will not be reported to the New Relic dashboard.
+
+After answering the last question, please wait a moment before closing your browser to allow the agent to send your answers to New Relic.
+
+## Additional resources
+- [Streaming alerts: key terms and concepts](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/understand-technical-concepts/streaming-alerts-key-terms-concepts/)
+- [Choose your aggregation method](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/get-started/choose-your-aggregation-method/)
+
+---
+
+# _Lab:_ Using Terraform to create an alert condition
+
+## Step 1
+In your New Relic account, copy a USER key from the [API keys](https://one.newrelic.com/launcher/api-keys-ui.api-keys-launcher) page. If there are no USER keys, click the _Create a key_ button in the upper right to create one, then copy it.
+
+## Step 2
+In your codespace, select the **variables.tf** tab and replace the api_key XXXXXX placeholder with the value you copied in Step 1.
+
+## Step 3
+Back in New Relic, [locate your account ID](https://docs.newrelic.com/docs/accounts/accounts-billing/account-structure/account-id/) and copy it.
+
+## Step 4
+In your codespace, select the **variables.tf** tab and replace the account_id XXXXXX placeholder with the value you copied in Step 3.
+
+## Step 5
+If your account is based in the EU, change the default region in **variables.tf** to **EU**.
+
+## Step 6
+Initialize Terraform by entering the following command in the terminal: `terraform init`. You'll receive a success message when Terraform finishes installing and registering the New Relic provider.
+
+## Step 7
+From New Relic’s _Alerts & AI > Alert Conditions_ page, select the alert condition you created earlier. Click the _</> View as code_ button in the upper right, then select _Terraform_. Finally, click _Copy to clipboard_. Click the _X_ in the upper right to close the _Code preview_ panel.
+
+## Step 8
+Go back to the list of alert conditions. Click the ellipsis (...) button to the right of the alert condition you just copied and select _Delete_. Confirm that you wish to delete the condition.
+
+## Step 9
+In your codespace, select the **main.tf** file. Position the cursor at the end of the file and paste the Terraform code you copied in Step 7.
+
+## Step 10
+Enter the following command in the terminal to preview the changes: `terraform plan`
+
+## Step 11
+To apply the changes, enter the following command in the terminal: `terraform apply`
+
+## Step 12
+Go back to the list of alert conditions in your New Relic account and reload the page. Confirm that the alert condition you deleted has been re-created.
+
+## Additional resources
+- [Getting started with New Relic and Terraform](https://docs.newrelic.com/docs/more-integrations/terraform/terraform-intro/)
+- [New Relic Terraform provider documentation](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs)
+
+---
+
+# _Lab:_ Using the NerdGraph Explorer
+
+[https://docs.newrelic.com/docs/apis/nerdgraph/get-started/nerdgraph-explorer/](https://docs.newrelic.com/docs/apis/nerdgraph/get-started/nerdgraph-explorer/)
+
+## Additional resources
+- [List of NerdGraph tutorials](https://docs.newrelic.com/docs/apis/nerdgraph/get-started/introduction-new-relic-nerdgraph/#tutorials)
+- [Change tracking documentation](https://docs.newrelic.com/docs/change-tracking/change-tracking-introduction/)
