@@ -63,7 +63,13 @@ From New Relic’s _Alert Conditions_ page, select the condition you just create
 Select _Tags_ at the top of the screen. Add one or more tags in the format _key: value_ (for example, _Lab: AQM_). You will use one of these tag values in the next lab to specify that a notification workflow should apply to this condition.
 
 ## Step 3
-Scroll down to _Additional details_ and click the _Edit_ button. In the _Send a custom incident description_ field, enter a description containing some of the tags you have created, for example: “{{ targetName }} is in the {{ tag.Environment }} environment, and is used for the {{ tag.Lab }} lab.” For more information, please see [https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/advanced-techniques/alert-custom-incident-descriptions/](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/advanced-techniques/alert-custom-incident-descriptions/).
+Scroll down to _Additional details_ and click the _Edit_ button. In the _Send a custom incident description_ field, enter a description containing some of the tags you have created, for example: 
+
+<!-- {% raw %} -->
+{{ tag.hostName }} is in the {{ tag.Environment }} environment, and is used for the {{ tag.Lab }} lab.
+<!-- {% endraw %} -->
+
+For more information, please see [https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/advanced-techniques/alert-custom-incident-descriptions/](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/advanced-techniques/alert-custom-incident-descriptions/).
 
 ## Step 4
 Click the _Save condition_ button to save your changes.
