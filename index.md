@@ -66,7 +66,7 @@ Select _Tags_ at the top of the screen. Add one or more tags in the format _key:
 Scroll down to _Additional details_ and click the _Edit_ button. In the _Send a custom incident description_ field, enter a description containing some of the tags you have created, for example: 
 
 <!-- {% raw %} -->
-{{ tag.hostName }} is in the {{ tag.Environment }} environment, and is used for the {{ tag.Lab }} lab.
+{{ tag.hostname }} is in the {{ tag.Environment }} environment, and is used for the {{ tag.Lab }} lab.
 <!-- {% endraw %} -->
 
 For more information, please see [https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/advanced-techniques/alert-custom-incident-descriptions/](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/advanced-alerts/advanced-techniques/alert-custom-incident-descriptions/).
