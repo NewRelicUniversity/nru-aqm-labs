@@ -85,7 +85,7 @@ From New Relic’s _Alerts & AI_ menu, select _Workflows_, then  _Create your fi
 Give your workflow a name, then use the _Filter data_ section to specify one of the tags you added to your alert condition in the previous lab. Any issues created by alert conditions with the tag value you select will be processed by this workflow.
 
 ## Step 3
-Click the _Additional settings_ button and enable the _Enrich your data_ option. Enter a name for your query and an NRQL query, such as `SELECT max(cpuPercent) FROM SystemSample FACET hostname SINCE 1 hour ago TIMESERIES`. The result of this query will be included with the alert notification.
+If you have a paid New Relic account, click the _Additional settings_ button and enable the _Enrich your data_ option. Enter a name for your query and an NRQL query, such as `SELECT max(cpuPercent) FROM SystemSample FACET hostname SINCE 1 hour ago TIMESERIES`. The result of this query will be included with the alert notification.
 
 ## Step 4
 In the _Notify_ section, select _Email_ and create a new destination for your email address (or select an existing destination if you have already created one). Save the destination, then click _Activate workflow_.
