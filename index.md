@@ -157,6 +157,9 @@ To apply the changes, enter the following command in the terminal: `terraform ap
 ## Step 12
 Go back to the list of alert conditions in your New Relic account and reload the page. Confirm that the alert condition you deleted has been re-created.
 
+## Step 13
+_Bonus:_ Notice that Terraform did not recreate the tag(s) you added to your alert condition. Using the [New Relic Terraform provider documentation](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs), figure out what to add to **main.tf** to add a tag to your alert condition, then run `terraform apply` to confirm that it works.
+
 ## Additional resources
 - [Getting started with New Relic and Terraform](https://docs.newrelic.com/docs/more-integrations/terraform/terraform-intro/)
 - [New Relic Terraform provider documentation](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs)
